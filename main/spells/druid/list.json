@@ -1,0 +1,104 @@
+[
+  {
+    "Name": "Produce Flame",
+    "Description": "A flickering flame appears in your hand.  The flame remains there for the Duration and harms neither you nor your Equipment.  The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet.  The spell ends if you dismiss it as an action or if you cast it again.  You can also Attack with the flame, although doing so ends the spell.  When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you.  Make a ranged spell Attack.",
+    "Damage": {
+      "Level 1": "1d8",
+      "Level 5": "2d8",
+      "Level 11": "3d8",
+      "Level 17": "4d8"
+    },
+    "Range": "Self (30ft)",
+    "Components": "VS",
+    "Duration": "10 min",
+    "Casting time": "1 action",
+    "Level": 0,
+    "School": "Conjuration",
+    "Spell Attack": "Ranged",
+    "Damage Type": "Fire"
+  },
+  {
+    "Name": "Mending",
+    "Description": "This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn clack, or a leaking wineskin.  As long as the break or tear is no longer than 1 foot in any dimension, you mend it, leaving no trace of the former damage.  This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.",
+    "Range": "Touch",
+    "Components": "VSM",
+    "Material": "Two lodestones",
+    "Duration": "Instant",
+    "Casting Time": "1 minute",
+    "Level": 0,
+    "School": "Transmutation"
+  },
+  {
+    "Name": "Poison Spray",
+    "Description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm.  The creature must succeed on a Constitution saving throw or take 1d12 poison damage.",
+    "Damage": {
+      "Level 1": "1d12",
+      "Level 5": "2d12",
+      "Level 11": "3d12",
+      "Level 17": "4d12"
+    },
+    "Save": "Constitution",
+    "Range": "10ft",
+    "Components": "VS",
+    "Duration": "Instant",
+    "Casting Time": "1 action",
+    "Level": 0,
+    "School": "Conjuration",
+    "Damage Type": "Poison",
+    "Damage Progression": "Cantrip Dice"
+  },
+  {
+    "Name": "Create or Destroy Water",
+    "Description": "You can create or destroy water.",
+    "Create Water": {
+      "Description": "You create up to 10 gallons of clean water within range in an open container.  Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area.",
+      "Material": "A drop of water"
+    },
+    "Destroy Water": {
+      "Description": "You destroy up to 10 gallons of water in an open container within range.  Alternatively, you destroy fog in a 30-foot cube within range.",
+      "Material": "A few grains of sand"
+    },
+    "At Higher Levels": "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.",
+    "Range": "30ft",
+    "Components": "VSM",
+    "Duration": "Instant",
+    "Casting Time": "1 action",
+    "Level": 1,
+    "School": "Transmutation"
+  },
+  {
+    "Name": "Goodberry",
+    "Description": "Up to ten berries appear in your hand and are infused with magic for the Duration.  A creature can use its action to eat one berry.  Eating a berry restores 1 hit point, and the berry provides enough nourishment to sustain a creature for one day.  The berries lose their potency if they have not been consumed within 24 hours of the casting of this spell.",
+    "Range": "Touch",
+    "Components": "VSM",
+    "Material": "A sprig of mistletoe",
+    "Duration": "Instant",
+    "Casting Time": "1 action",
+    "Level": 1,
+    "School": "Transmutation"
+  },
+  {
+    "Name": "Entangle",
+    "Description": "Grasping weeds and vines sprout from the ground in a 20-foot square starting from a point within range.  For the Duration, these Plants turn the ground in the area into difficult terrain.  A creature in the area when you cast the spell must succeed on a Strength saving throw or be Restrained by the entangling Plants until the spell ends.  A creature Restrained by the Plants can use its action to make a Strength check against your spell save DC.  On a success, it frees itself.  When the spell ends, the conjured Plants wilt away.",
+    "Saves": "Strength",
+    "Range": "90ft",
+    "Target": "Any creature inside a 20-foot square from a point within range when the spell is cast",
+    "Components": "VS",
+    "Duration": "Up to 1 minute",
+    "Casting Time": "1 action",
+    "Level": 1,
+    "School": "Conjuration"
+  },
+  {
+    "Name": "Charm Person",
+    "Description": "You attempt to charm a humanoid you can see within range.  It must make a Wisdom saving throw, and does so with advantage if you or your companions are fighting it.  If it fails the saving throw, it is Charmed by you until the spell ends or until you or your companions do anything harmful to it.  The Charmed creature regards you as a friendly acquaintance.  When the spell ends, the creature knows it was Charmed by you.",
+    "At Higher Levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot above 1st.  The creatures must be within 30 feet of each other when you target them.",
+    "Save": "Wisdom",
+    "Range": "30ft",
+    "Components": "VS",
+    "Duration": "1 hour",
+    "Casting Time": "1 action",
+    "Level": 1,
+    "School": "Enchantment"
+  }
+]
