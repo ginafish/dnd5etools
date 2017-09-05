@@ -33,7 +33,10 @@ def rollSkill(rolledSkill, characterSheet):
     result = roll + appliedProficiencyBonus + skillModifier
     print unicode(characterSheet["Character Name"]) + \
           " rolled a " + unicode(result) + \
-          " on their " + unicode(rolledSkill) + " check.\n"
+          " on their " + unicode(rolledSkill) + " check.\n" + \
+          "(roll: " + unicode(roll) + \
+          ", skill modifier: " + unicode(skillModifier) + \
+          ", proficiency bonus: " + unicode(appliedProficiencyBonus) + ")\n"
 
 
 def printSkillList():

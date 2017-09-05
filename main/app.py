@@ -23,7 +23,9 @@ def doRollSkill(skill, characterSheet = characterSheet):
 
 
 def printCommandList():
-    print "roll [Skill Name] check\n\n"
+    print "------ Command list ------\n" + \
+          "roll [Skill Name] check\n" + \
+          "--------------------------\n"
 
 
 def getPlayerCommand():
@@ -39,6 +41,7 @@ def getPlayerCommand():
     elif(helpRegex.match(playerCommand)):
         printCommandList()
     elif(quitRegex.match(playerCommand)):
+        print "Goodbye!"
         raise SystemExit
 
 # --------------------------------------------------------
