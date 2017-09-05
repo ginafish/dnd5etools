@@ -5,13 +5,17 @@ import main.rollSkill
 #from pprint import pprint
 
 
-characterName = raw_input('Please enter the name of the character to select in lowercase: \n: ')
-with open('characters/' + characterName + '/stats.json') as characterSheetFile:
-    characterSheet = json.load(characterSheetFile)
 
 
 
 # --------------------------------------------------------
+def setCharacterSheet():
+    characterName = raw_input('Please enter the name of the character to select in lowercase: \n: ')
+    with open('characters/' + characterName + '/stats.json') as characterSheetFile:
+        characterSheet = json.load(characterSheetFile)
+    return characterSheet
+
+
 def parseRollCheck(command):
     parsedSkill = re.sub(r"^(roll )", '', command)
     parsedSkill = re.sub(r"( check)", '', parsedSkill)
@@ -23,9 +27,11 @@ def doRollSkill(skill, characterSheet = characterSheet):
 
 
 def printCommandList():
-    print "------ Command list ------\n" + \
+    commandList = "------ Command list ------\n" + \
           "roll [Skill Name] check\n" + \
           "--------------------------\n"
+    print commandList
+    return commandList
 
 
 def getPlayerCommand():
@@ -46,6 +52,7 @@ def getPlayerCommand():
 
 # --------------------------------------------------------
 
+characterSheet = setCharacterSheet()
 
 
 characterName = characterSheet["Character Name"]
