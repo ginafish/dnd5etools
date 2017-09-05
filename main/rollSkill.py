@@ -12,7 +12,7 @@ def isValidSkill(testSkill):
 
 def rollSkill(rolledSkill, characterSheet):
     if(not isValidSkill(rolledSkill)):
-        print("Invalid skill roll.")
+        print("Invalid skill roll.\n")
         return -1
 
     with open('skills/skills.json') as skillsFile:
@@ -32,8 +32,8 @@ def rollSkill(rolledSkill, characterSheet):
     roll = random.randint(1, 20)
     result = roll + appliedProficiencyBonus + skillModifier
     print unicode(characterSheet["Character Name"]) + \
-    " rolled a " + unicode(result) + \
-    " on their " + unicode(rolledSkill) + " check."
+          " rolled a " + unicode(result) + \
+          " on their " + unicode(rolledSkill) + " check.\n"
 
 
 def printSkillList():
