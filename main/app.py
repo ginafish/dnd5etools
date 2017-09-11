@@ -1,4 +1,3 @@
-import json
 import re
 
 import main.rollSkill
@@ -11,8 +10,6 @@ import main.rollSkill
 # --------------------------------------------------------
 def setCharacterSheet():
     characterName = raw_input('Please enter the name of the character to select in lowercase: \n: ')
-    with open('characters/' + characterName + '/stats.json') as characterSheetFile:
-        characterSheet = json.load(characterSheetFile)
     return characterSheet
 
 
@@ -49,23 +46,34 @@ def getPlayerCommand():
     elif(quitRegex.match(playerCommand)):
         print "Goodbye!"
         raise SystemExit
+    else:
+        print "Invalid command.\n"
+
+
+def buildCharacterInfo():
+    characterName = characterSheet["Character Name"]
+    characterRace = characterSheet["Race"]
+    characterClass = characterSheet["Class"]
+    characterLevel = characterSheet["Level"]
+    characterExp = characterSheet["Exp"]
+    characterInfo = "\n Selected character:\n" + unicode(characterName) + ", " \
+                    + unicode(characterRace) + " " \
+                    + unicode(characterClass) + ", Level " \
+                    + unicode(characterLevel) + ", EXP: " \
+                    + unicode(characterExp) + "\n"
+    return characterInfo
+
+
+def printCharacterInfo():
+    info = buildCharacterInfo()
+    print unicode(info)
+
 
 # --------------------------------------------------------
 
 characterSheet = setCharacterSheet()
 
-
-characterName = characterSheet["Character Name"]
-characterRace = characterSheet["Race"]
-characterClass = characterSheet["Class"]
-characterLevel = characterSheet["Level"]
-characterExp = characterSheet["Exp"]
-characterInfo = "\n Selected character:\n" + unicode(characterName) + ", " \
-                + unicode(characterRace) + " " \
-                + unicode(characterClass) + ", Level " \
-                + unicode(characterLevel) + ", EXP: " \
-                + unicode(characterExp) + "\n"
-print unicode(characterInfo)
+printCharacterInfo()
 
 while(True):
     getPlayerCommand()

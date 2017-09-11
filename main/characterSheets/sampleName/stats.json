@@ -24,17 +24,17 @@
   "Max HP": 47,
   "Hit dice": "8d8",
   "Armor Class": 13,
-  "Saving throws": [
+  "Saving Throws": [
     "INT",
     "WIS"
   ],
-  "Skill proficiencies": [
+  "Skill Proficiencies": [
     "Animal Handling",
     "Insight",
     "Perception",
     "Persuasion"
   ],
-  "Features and traits": {
+  "Features and Traits": {
     "Lucky": "When you roll a 1 on an attack roll, ability check, or saving throw, you can re-roll the die and you must take that roll.",
     "Brave": "You have advantage on saving throws against being frigtened.",
     "Halfling Nimbleness": "You can move through the space of any creature that is of a size larger than yours.",
@@ -45,12 +45,12 @@
     "Common",
     "Halfling"
   ],
-  "Armor proficencies": [
+  "Armor Proficiencies": [
     "Light Armor",
     "Medium Armor",
     "Shields"
   ],
-  "Weapon proficencies": [
+  "Weapon Proficiencies": [
     "Clubs",
     "Daggers",
     "Darts",

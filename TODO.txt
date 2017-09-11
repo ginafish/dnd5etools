@@ -1,0 +1,10 @@
+Potential features:
+    Character sheet creation
+
+
+Future changes:
+    Multiclassing support
+    Current HP
+    (In Progress) Required vs optional character sheet JSON items
+
+

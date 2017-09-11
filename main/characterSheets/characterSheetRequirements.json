@@ -1,0 +1,167 @@
+[
+  {
+    "Field": "Character Name",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Class",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Exp",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Level",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Race",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Alignment",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Age",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Gender",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Height",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Weight",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Eyes",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Skin",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Hair",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Base Stats",
+    "Requirement": "Required",
+    "Subfields": [
+      {
+        "Name": "STR",
+        "Requirement": "Required"
+      },
+      {
+        "Name": "DEX",
+        "Requirement": "Required"
+      },
+      {
+        "Name": "CON",
+        "Requirement": "Required"
+      },
+      {
+        "Name": "INT",
+        "Requirement": "Required"
+      },
+      {
+        "Name": "WIS",
+        "Requirement": "Required"
+      },
+      {
+        "Name": "CHR",
+        "Requirement": "Required"
+      }
+    ]
+  },
+  {
+    "Field": "Proficiency Bonus",
+    "Requirement": "Required"
+  },
+  {
+    "Field": "Speed",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Max HP",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Hit Dice",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Armor Class",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Saving Throws",
+    "Requirement": "Recommended"
+  },
+  {
+    "Field": "Skill Proficiencies",
+    "Requirement": "Required"
+  },
+  {
+    "Field": "Features and Traits",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Languages",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Armor Proficiencies",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Weapon Proficiencies",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Weapons",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Armor",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Money",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Other Items",
+    "Requirement": "Optional"
+  },
+  {
+    "Field": "Spell Info",
+    "Requirement": "Recommended",
+    "Subfields": [
+      {
+        "Name": "Spell Save DC",
+        "Requirement": "Recommended"
+      },
+      {
+        "Name": "Spell Attack Bonus",
+        "Requirement": "Recommended"
+      },
+      {
+        "Name": "Spell Slots",
+        "Requirement": "Optional"
+      },
+      {
+        "Name": "Current Spells",
+        "Requirement": "Optional"
+      }
+    ]
+  }
+]
+
