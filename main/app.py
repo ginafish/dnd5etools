@@ -1,4 +1,5 @@
 import re
+import json
 
 import main.rollSkill
 #from pprint import pprint
@@ -10,6 +11,8 @@ import main.rollSkill
 # --------------------------------------------------------
 def setCharacterSheet():
     characterName = raw_input('Please enter the name of the character to select in lowercase: \n: ')
+    with open('characterSheets/' + characterName + '/stats.json') as characterSheetFile:
+        characterSheet = json.load(characterSheetFile)
     return characterSheet
 
 
@@ -19,12 +22,13 @@ def parseRollCheck(command):
     return parsedSkill
 
 
-def doRollSkill(skill, characterSheet = characterSheet):
+def doRollSkill(skill, characterSheet):
     main.rollSkill.rollSkill(skill, characterSheet)
 
 
 def printCommandList():
     commandList = "------ Command list ------\n" + \
+          "help\n" + \
           "roll [Skill Name] check\n" + \
           "--------------------------\n"
     print commandList
@@ -40,7 +44,7 @@ def getPlayerCommand():
 
     if(rollSkillCheckRegex.match(playerCommand)):
         parsedSkill = parseRollCheck(playerCommand)
-        doRollSkill(parsedSkill)
+        doRollSkill(parsedSkill, characterSheet)
     elif(helpRegex.match(playerCommand)):
         printCommandList()
     elif(quitRegex.match(playerCommand)):

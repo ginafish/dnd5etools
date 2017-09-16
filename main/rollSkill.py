@@ -19,7 +19,7 @@ def rollSkill(rolledSkill, characterSheet):
         skillsList = json.load(skillsFile)
 
     appliedProficiencyBonus = 0
-    if (rolledSkill in characterSheet["Skill proficiencies"]):
+    if (rolledSkill in characterSheet["Skill Proficiencies"]):
         appliedProficiencyBonus = characterSheet["Proficiency Bonus"]
 
     skillModifier = 0
