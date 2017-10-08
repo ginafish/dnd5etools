@@ -56,27 +56,27 @@
     "Requirement": "Required",
     "Subfields": [
       {
-        "Name": "STR",
+        "Field": "STR",
         "Requirement": "Required"
       },
       {
-        "Name": "DEX",
+        "Field": "DEX",
         "Requirement": "Required"
       },
       {
-        "Name": "CON",
+        "Field": "CON",
         "Requirement": "Required"
       },
       {
-        "Name": "INT",
+        "Field": "INT",
         "Requirement": "Required"
       },
       {
-        "Name": "WIS",
+        "Field": "WIS",
         "Requirement": "Required"
       },
       {
-        "Name": "CHR",
+        "Field": "CHR",
         "Requirement": "Required"
       }
     ]

@@ -10,26 +10,39 @@ import main.rollSkill
 
 # --------------------------------------------------------
 def setCharacterSheet():
-    characterName = raw_input('Please enter the name of the character to select in lowercase: \n: ')
+    characterName = raw_input('Please enter the name of the character to select (not case sensitive): \n: ')
     with open('characterSheets/' + characterName + '/stats.json') as characterSheetFile:
         characterSheet = json.load(characterSheetFile)
     return characterSheet
 
 
-def parseRollCheck(command):
+def parseSkillRollCheck(command):
     parsedSkill = re.sub(r"^(roll )", '', command)
     parsedSkill = re.sub(r"( check)", '', parsedSkill)
+    print parsedSkill
     return parsedSkill
 
-
 def doRollSkill(skill, characterSheet):
-    main.rollSkill.rollSkill(skill, characterSheet)
+    main.rollSkill.rollSkillCheck(skill, characterSheet)
+
+
+def doCurrentHealthCheck(characterSheet):
+    print "Your current health is " + \
+          unicode(characterSheet["Current HP"]) + \
+          " out of " + \
+          unicode(characterSheet["Max HP"])
 
 
 def printCommandList():
     commandList = "------ Command list ------\n" + \
           "help\n" + \
           "roll [Skill Name] check\n" + \
+          "roll [Stat] check\n" + \
+          "roll [die]\n" + \
+          "take [amount] damage\n" + \
+          "gain exp\n" \
+          "current health\n" + \
+          "[quit | exit]\n" + \
           "--------------------------\n"
     print commandList
     return commandList
@@ -38,12 +51,12 @@ def printCommandList():
 def getPlayerCommand():
     playerCommand = raw_input('What would you like to do?\n' + ': ')
 
-    rollSkillCheckRegex = re.compile(r"^(roll) \w+ (check)")
     helpRegex = re.compile(r"^(help)")
+    rollSkillCheckRegex = re.compile(r"^(roll) \w+ *\w* (check)")
     quitRegex = re.compile(r"^(exit|quit)")
 
     if(rollSkillCheckRegex.match(playerCommand)):
-        parsedSkill = parseRollCheck(playerCommand)
+        parsedSkill = parseSkillRollCheck(playerCommand)
         doRollSkill(parsedSkill, characterSheet)
     elif(helpRegex.match(playerCommand)):
         printCommandList()

@@ -4,8 +4,13 @@ import json
 
 class CharacterSheet:
     def __init__(self, name):
-        with open('characterSheets/' + name + '/stats.json') as characterSheetFile:
+        with open('./' + name + '/stats.json') as characterSheetFile:
             self.characterSheetJson = json.load(characterSheetFile)
+
+        with open('./characterSheetRequirements.json') as characterSheetRequirementsFile:
+            self.characterSheetRequirements = json.load(characterSheetRequirementsFile)
+
+        for field in range(0, len(self.characterSheetRequirements)):
 
         # -------------- Verify mandatory fields present --------------
         if "Character Name" not in self.characterSheetJson:

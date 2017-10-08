@@ -1,0 +1,102 @@
+[
+  {
+    "Level": 1,
+    "Exp": 1,
+    "Proficiency Bonus": 2
+  },
+  {
+    "Level": 2,
+    "Exp": 300,
+    "Proficiency Bonus": 2
+  },
+  {
+    "Level": 3,
+    "Exp": 900,
+    "Proficiency Bonus": 2
+  },
+  {
+    "Level": 4,
+    "Exp": 2700,
+    "Proficiency Bonus": 2
+  },
+  {
+    "Level": 5,
+    "Exp": 6500,
+    "Proficiency Bonus": 3
+  },
+  {
+    "Level": 6,
+    "Exp": 14000,
+    "Proficiency Bonus": 3
+  },
+  {
+    "Level": 7,
+    "Exp": 23000,
+    "Proficiency Bonus": 3
+  },
+  {
+    "Level": 8,
+    "Exp": 34000,
+    "Proficiency Bonus": 3
+  },
+  {
+    "Level": 9,
+    "Exp": 48000,
+    "Proficiency Bonus": 4
+  },
+  {
+    "Level": 10,
+    "Exp": 64000,
+    "Proficiency Bonus": 4
+  },
+  {
+    "Level": 11,
+    "Exp": 85000,
+    "Proficiency Bonus": 4
+  },
+  {
+    "Level": 12,
+    "Exp": 100000,
+    "Proficiency Bonus": 4
+  },
+  {
+    "Level": 13,
+    "Exp": 120000,
+    "Proficiency Bonus": 5
+  },
+  {
+    "Level": 14,
+    "Exp": 120000,
+    "Proficiency Bonus": 5
+  },
+  {
+    "Level": 15,
+    "Exp": 165000,
+    "Proficiency Bonus": 5
+  },
+  {
+    "Level": 16,
+    "Exp": 195000,
+    "Proficiency Bonus": 5
+  },
+  {
+    "Level": 17,
+    "Exp": 225000,
+    "Proficiency Bonus": 6
+  },
+  {
+    "Level": 18,
+    "Exp": 265000,
+    "Proficiency Bonus": 6
+  },
+  {
+    "Level": 19,
+    "Exp": 305000,
+    "Proficiency Bonus": 6
+  },
+  {
+    "Level": 20,
+    "Exp": 355000,
+    "Proficiency Bonus": 6
+  }
+]

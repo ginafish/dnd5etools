@@ -2,7 +2,7 @@ import json
 import random
 
 def isValidSkill(testSkill):
-    with open('skills/skills.json') as skillsFile:
+    with open('data/skillsList.json') as skillsFile:
         skillsList = json.load(skillsFile)
     for skill in skillsList:
         if(skill["Name"] == testSkill):
@@ -10,12 +10,12 @@ def isValidSkill(testSkill):
     return False
 
 
-def rollSkill(rolledSkill, characterSheet):
+def rollSkillCheck(rolledSkill, characterSheet):
     if(not isValidSkill(rolledSkill)):
         print("Invalid skill roll.\n")
         return -1
 
-    with open('skills/skills.json') as skillsFile:
+    with open('data/skillsList.json') as skillsFile:
         skillsList = json.load(skillsFile)
 
     appliedProficiencyBonus = 0
@@ -40,7 +40,7 @@ def rollSkill(rolledSkill, characterSheet):
 
 
 def printSkillList():
-    with open('skills/skills.json') as skillsFile:
+    with open('skills/skillsList.json') as skillsFile:
         skillsList = json.load(skillsFile)
     for skill in skillsList:
         print(skill["Name"])
