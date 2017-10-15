@@ -1,29 +1,49 @@
 import re
 import json
 
-import main.rollSkill
-#from pprint import pprint
-
-
+import rollSkill
+import rollStat
 
 
 
 # --------------------------------------------------------
 def setCharacterSheet():
     characterName = raw_input('Please enter the name of the character to select (not case sensitive): \n: ')
-    with open('characterSheets/' + characterName + '/stats.json') as characterSheetFile:
+    #try:
+    with open('main/characterSheets/' + characterName + '/stats.json', 'r+') as characterSheetFile:
         characterSheet = json.load(characterSheetFile)
+    characterSheetFile.close()
     return characterSheet
+    # except IOError:
+    #     print('Invalid character sheet.')
+    #     setCharacterSheet()
+#D:\Repos\characterSheetRolls\main\characterSheets\teia\stats.json
+
+def buildCharacterInfo():
+    characterName = characterSheet["Character Name"]
+    characterRace = characterSheet["Race"]
+    characterClass = characterSheet["Class"]
+    characterLevel = characterSheet["Level"]
+    characterExp = characterSheet["Exp"]
+    characterInfo = "\n Selected character:\n" + unicode(characterName) + ", " \
+                    + unicode(characterRace) + " " \
+                    + unicode(characterClass) + ", Level " \
+                    + unicode(characterLevel) + ", EXP: " \
+                    + unicode(characterExp) + "\n"
+    return characterInfo
 
 
-def parseSkillRollCheck(command):
-    parsedSkill = re.sub(r"^(roll )", '', command)
-    parsedSkill = re.sub(r"( check)", '', parsedSkill)
-    print parsedSkill
-    return parsedSkill
+def parseRollCheck(command):
+    parsedRoll = re.sub(r"^(roll )", '', command)
+    parsedRoll = re.sub(r"( check)", '', parsedRoll)
+    return parsedRoll
 
 def doRollSkill(skill, characterSheet):
-    main.rollSkill.rollSkillCheck(skill, characterSheet)
+    rollSkill.rollSkillCheck(skill, characterSheet)
+
+def doRollStat(stat, characterSheet):
+    rollStat.rollStatCheck(stat, characterSheet)
+
 
 
 def doCurrentHealthCheck(characterSheet):
@@ -31,6 +51,11 @@ def doCurrentHealthCheck(characterSheet):
           unicode(characterSheet["Current HP"]) + \
           " out of " + \
           unicode(characterSheet["Max HP"])
+
+
+def printCharacterInfo():
+    info = buildCharacterInfo()
+    print unicode(info)
 
 
 def printCommandList():
@@ -52,12 +77,15 @@ def getPlayerCommand():
     playerCommand = raw_input('What would you like to do?\n' + ': ')
 
     helpRegex = re.compile(r"^(help)")
-    rollSkillCheckRegex = re.compile(r"^(roll) \w+ *\w* (check)")
+    rollCheckRegex = re.compile(r"^(roll) \w+ *\w* (check)")
     quitRegex = re.compile(r"^(exit|quit)")
 
-    if(rollSkillCheckRegex.match(playerCommand)):
-        parsedSkill = parseSkillRollCheck(playerCommand)
-        doRollSkill(parsedSkill, characterSheet)
+    if(rollCheckRegex.match(playerCommand)):
+        parsedRoll = parseRollCheck(playerCommand)
+        if(rollSkill.isValidSkill(parsedRoll)):
+            doRollSkill(parsedRoll, characterSheet)
+        elif(rollStat.isValidStat(parsedRoll)):
+            doRollStat(parsedRoll, characterSheet)
     elif(helpRegex.match(playerCommand)):
         printCommandList()
     elif(quitRegex.match(playerCommand)):
@@ -65,25 +93,6 @@ def getPlayerCommand():
         raise SystemExit
     else:
         print "Invalid command.\n"
-
-
-def buildCharacterInfo():
-    characterName = characterSheet["Character Name"]
-    characterRace = characterSheet["Race"]
-    characterClass = characterSheet["Class"]
-    characterLevel = characterSheet["Level"]
-    characterExp = characterSheet["Exp"]
-    characterInfo = "\n Selected character:\n" + unicode(characterName) + ", " \
-                    + unicode(characterRace) + " " \
-                    + unicode(characterClass) + ", Level " \
-                    + unicode(characterLevel) + ", EXP: " \
-                    + unicode(characterExp) + "\n"
-    return characterInfo
-
-
-def printCharacterInfo():
-    info = buildCharacterInfo()
-    print unicode(info)
 
 
 # --------------------------------------------------------
