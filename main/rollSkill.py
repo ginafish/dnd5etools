@@ -28,7 +28,6 @@ def rollSkillCheck(rolledSkill, characterSheet):
             skillValue = characterSheet["Base Stats"][unicode(skill["Stat"])]
             skillModifier = ((skillValue - 10) // 2)
 
-    random.seed()
     roll = random.randint(1, 20)
     result = roll + appliedProficiencyBonus + skillModifier
     print unicode(characterSheet["Character Name"]) + \

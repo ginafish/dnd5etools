@@ -1,5 +1,6 @@
 import re
 import json
+import random
 
 import rollSkill
 import rollStat
@@ -9,15 +10,14 @@ import rollStat
 # --------------------------------------------------------
 def setCharacterSheet():
     characterName = raw_input('Please enter the name of the character to select (not case sensitive): \n: ')
-    #try:
-    with open('main/characterSheets/' + characterName + '/stats.json', 'r+') as characterSheetFile:
-        characterSheet = json.load(characterSheetFile)
-    characterSheetFile.close()
-    return characterSheet
-    # except IOError:
-    #     print('Invalid character sheet.')
-    #     setCharacterSheet()
-#D:\Repos\characterSheetRolls\main\characterSheets\teia\stats.json
+    try:
+        with open('main/characterSheets/' + characterName + '/stats.json', 'r+') as characterSheetFile:
+            characterSheet = json.load(characterSheetFile)
+        characterSheetFile.close()
+        return characterSheet
+    except IOError:
+        print('Invalid character sheet.\n')
+        return None
 
 def buildCharacterInfo():
     characterName = characterSheet["Character Name"]
@@ -86,20 +86,27 @@ def getPlayerCommand():
             doRollSkill(parsedRoll, characterSheet)
         elif(rollStat.isValidStat(parsedRoll)):
             doRollStat(parsedRoll, characterSheet)
+        else:
+            print 'Invalid roll.  If you\'re not sure what to do, try entering \'help\'.\n'
     elif(helpRegex.match(playerCommand)):
         printCommandList()
     elif(quitRegex.match(playerCommand)):
         print "Goodbye!"
         raise SystemExit
     else:
-        print "Invalid command.\n"
+        print "Invalid command.  If you\'re not sure what to do, try entering \'help\'.\n"
 
 
 # --------------------------------------------------------
 
 characterSheet = setCharacterSheet()
 
+while(characterSheet == None):
+    characterSheet = setCharacterSheet()
+
 printCharacterInfo()
+
+random.seed()
 
 while(True):
     getPlayerCommand()

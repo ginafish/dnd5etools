@@ -146,6 +146,10 @@
     "Requirement": "Recommended",
     "Subfields": [
       {
+        "Name": "Spellcasting Class",
+        "Requirement": "Optional"
+      },
+      {
         "Name": "Spell Save DC",
         "Requirement": "Recommended"
       },

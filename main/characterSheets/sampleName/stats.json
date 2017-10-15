@@ -1,215 +1,96 @@
 {
   "Character Name": "Sample Character",
-  "Class": "Druid",
-  "Exp": 42900,
-  "Level": 8,
-  "Race": "Halfling",
-  "Alignment": "Lawful Good",
-  "Age": 40,
-  "Height": "3'1",
-  "Weight": 42,
-  "Eyes": "Brown",
-  "Skin": "Tan",
-  "Hair": "Short",
+  "Class": "Class",
+  "Exp": 0,
+  "Level": 1,
+  "Race": "Race",
+  "Alignment": "Alignment",
+  "Age": 0,
+  "Height": "0'1\"",
+  "Weight": 0,
+  "Eyes": "Descrition",
+  "Skin": "Descrition",
+  "Hair": "Descrition",
   "Base Stats": {
-    "STR": 11,
-    "DEX": 15,
-    "CON": 11,
-    "INT": 17,
-    "WIS": 18,
-    "CHR": 18
+    "STR": 0,
+    "DEX": 0,
+    "CON": 0,
+    "INT": 0,
+    "WIS": 0,
+    "CHR": 0
   },
-  "Proficiency Bonus": 3,
-  "Speed": 25,
-  "Max HP": 47,
-  "Hit dice": "8d8",
-  "Armor Class": 13,
+  "Proficiency Bonus": 0,
+  "Speed": 0,
+  "Max HP": 0,
+  "Hit dice": "0d0",
+  "Armor Class": 0,
   "Saving Throws": [
-    "INT",
-    "WIS"
+    "Stat",
+    "Stat"
   ],
   "Skill Proficiencies": [
-    "Animal Handling",
-    "Insight",
-    "Perception",
-    "Persuasion"
+    "Skill",
+    "Skill"
   ],
   "Features and Traits": {
-    "Lucky": "When you roll a 1 on an attack roll, ability check, or saving throw, you can re-roll the die and you must take that roll.",
-    "Brave": "You have advantage on saving throws against being frigtened.",
-    "Halfling Nimbleness": "You can move through the space of any creature that is of a size larger than yours.",
-    "Subrace": "Lightfoot",
-    "Naturally Stealthy": "You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you."
+    "Feature": "Description",
+    "Trait": "Description"
   },
   "Languages": [
     "Common",
-    "Halfling"
+    "Other Language"
   ],
   "Armor Proficiencies": [
-    "Light Armor",
-    "Medium Armor",
-    "Shields"
+    "Armor Name",
+    "Other Armor Name"
   ],
   "Weapon Proficiencies": [
-    "Clubs",
-    "Daggers",
-    "Darts",
-    "Javelins",
-    "Maces",
-    "Quarter staffs",
-    "Scimitars",
-    "Sickles",
-    "Slings",
-    "Spears"
+    "Weapon Name",
+    "Other Weapon Name"
   ],
   "Weapons": [
     {
-      "Name": "Sickle",
-      "Damage": "1d4",
-      "Damage type": "Slash",
-      "Other Effect": "None"
-    },
-    {
-      "Name": "Short Bow",
-      "Damage": "1d6",
-      "Damage type": "Piercing",
+      "Name": "Weapon Name",
+      "Damage": "0d0",
+      "Damage type": "Type",
       "Other Effect": "None"
     }
   ],
   "Armor": [
     {
-      "Name": "Leather Armor",
+      "Name": "Armor Name",
       "Equipped": true
     }
   ],
   "Money": {
-    "Gold": 52,
-    "Silver": 70,
-    "Copper": 7
+    "Gold": 0,
+    "Silver": 0,
+    "Copper": 0
   },
   "Other Items": [
     {
-      "Name": "Explorer's pack",
+      "Name": "Item Name",
       "Description": "derp"
     },
     {
-      "Name": "Druidic focus",
+      "Name": "Item Name",
       "Description": "derp"
-    },
-    {
-      "Name": "Arrow",
-      "Count": 88,
-      "Description": "derp"
-    },
-    {
-      "Name": "Candle",
-      "Count": 3,
-      "Description": "derp"
-    },
-    {
-      "Name": "Blanket",
-      "Description": "desc"
-    },
-    {
-      "Name": "Clothes, travelers",
-      "Description": "desc"
-    },
-    {
-      "Name": "Spring of mistletoe",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Lamp",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Quiver",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Rations",
-      "Count": 10,
-      "Description": "desc"
-    },
-    {
-      "Name": "Scale, merchant's",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Soap",
-      "Count": 2,
-      "Description": "desc"
-    },
-    {
-      "Name": "Waterskin",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Bedroll",
-      "Count": 1,
-      "Description": "desc"
-    },
-    {
-      "Name": "Basket",
-      "Count": 2,
-      "Description": "desc"
-    },
-    {
-      "Name": "Glass bottle",
-      "Count": 2,
-      "Description": "desc"
-    },
-    {
-      "Name": "Pot",
-      "Count": 5,
-      "Description": "desc"
-    },
-    {
-      "Name": "Backpack",
-      "Count": 1,
-      "Description": "desc"
     }
   ],
   "Spell Info": {
-    "Spell Save DC": 15,
-    "Spell Attack Bonus": 7,
+    "Spellcasting Class": "Circle or Class",
+    "Spell Save DC": 0,
+    "Spell Attack Bonus": 0,
     "Spell slots": [
-      3,
-      4,
-      3,
-      3,
-      2
+      1,
+      1
     ],
     "Current Spells": [
       [
-        "Produce Flame",
-        "Mending",
-        "Poison Spray"
+        "Cantrip"
       ],
       [
-        "Create or Destroy Water",
-        "Goodberry",
-        "Entangle",
-        "Charm Person"
-      ],
-      [
-        "Flame Blade",
-        "Moonbeam",
-        "Gust of Wind"
-      ],
-      [
-        "Wind Wall",
-        "Speak With Plants",
-        "Conjure Animals"
-      ],
-      [
-        "Control Water",
-        "Polymorph"
+        "Spell"
       ]
     ]
   }

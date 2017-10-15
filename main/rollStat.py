@@ -22,7 +22,6 @@ def rollStatCheck(statRoll, characterSheet):
         print "ERROR: Character sheet is missing your " + unicode(stat) + " stat, or is not properly formatted.\n"
         raise SystemExit
 
-    random.seed()
     roll = random.randint(1, 20)
     result = roll + statModifier
 
