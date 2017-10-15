@@ -10,7 +10,6 @@ def isValidStat(testStat):
     return False
 
 def rollStatCheck(statRoll, characterSheet):
-    print 'entered stat check\n'
     stat = statRoll.upper()
     if(not isValidStat(stat)):
         print 'Invalid stat ' + statRoll + '\n'
