@@ -1,10 +1,12 @@
 import json
 import random
 
+#TODO: make case insensitive
 def isValidSkill(testSkill):
     with open('main/data/skillsList.json') as skillsFile:
         skillsList = json.load(skillsFile)
     for skill in skillsList:
+        #print unicode(skill["Name"]) + " " + unicode(skill["Name"] == testSkill) + " " + skill["Name"]
         if(skill["Name"] == testSkill):
             return True
     return False

@@ -5,6 +5,15 @@ import random
 import rollSkill
 import rollStat
 
+#import readline
+try:
+    import readline
+except ImportError:
+    import pyreadline as readline
+except:
+    print "DEBUG: Command line functionality limited; no pyreadline imported.\n"
+    pass
+
 
 
 # --------------------------------------------------------
@@ -50,7 +59,8 @@ def doCurrentHealthCheck(characterSheet):
     print "Your current health is " + \
           unicode(characterSheet["Current HP"]) + \
           " out of " + \
-          unicode(characterSheet["Max HP"])
+          unicode(characterSheet["Max HP"]) + \
+          "\n"
 
 
 def printCharacterInfo():
@@ -61,27 +71,29 @@ def printCharacterInfo():
 def printCommandList():
     commandList = "------ Command list ------\n" + \
           "help\n" + \
-          "roll [Skill Name] check\n" + \
-          "roll [Stat] check\n" + \
-          "roll [die]\n" + \
-          "take [amount] damage\n" + \
-          "gain exp\n" \
+          "roll <skill-name> [check]\n" + \
+          "roll <stat> [check]\n" + \
+          "roll <die>\n" + \
+          "take <amount> damage\n" + \
+          "gain <exp>\n" \
           "current health\n" + \
-          "[quit | exit]\n" + \
+          "{quit | exit}\n" + \
           "--------------------------\n"
     print commandList
     return commandList
 
 
 def getPlayerCommand():
-    playerCommand = raw_input('What would you like to do?\n' + ': ')
+    playerCommand = raw_input('What would you like to do?\n' + '$ ')
 
     helpRegex = re.compile(r"^(help)")
-    rollCheckRegex = re.compile(r"^(roll) \w+ *\w* (check)")
+    rollCheckRegex = re.compile(r"^(roll) \w+ *\w*")
+    currentHealthRegex = re.compile(r"^(current health)")
     quitRegex = re.compile(r"^(exit|quit)")
 
     if(rollCheckRegex.match(playerCommand)):
         parsedRoll = parseRollCheck(playerCommand)
+        #print unicode('Parsed roll: ') + unicode(parsedRoll) + '\n'
         if(rollSkill.isValidSkill(parsedRoll)):
             doRollSkill(parsedRoll, characterSheet)
         elif(rollStat.isValidStat(parsedRoll)):
@@ -90,6 +102,8 @@ def getPlayerCommand():
             print 'Invalid roll.  If you\'re not sure what to do, try entering \'help\'.\n'
     elif(helpRegex.match(playerCommand)):
         printCommandList()
+    elif(currentHealthRegex.match(playerCommand)):
+        doCurrentHealthCheck(characterSheet)
     elif(quitRegex.match(playerCommand)):
         print "Goodbye!"
         raise SystemExit
@@ -101,7 +115,7 @@ def getPlayerCommand():
 
 characterSheet = setCharacterSheet()
 
-while(characterSheet == None):
+while(characterSheet is None):
     characterSheet = setCharacterSheet()
 
 printCharacterInfo()

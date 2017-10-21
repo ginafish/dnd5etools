@@ -1,8 +1,8 @@
 {
   "Character Name": "Teia",
   "Class": "Druid",
-  "Exp": 58000,
-  "Level": 8,
+  "Exp": 64000,
+  "Level": 10,
   "Race": "Halfling",
   "Alignment": "Lawful Good",
   "Age": 40,
@@ -20,7 +20,7 @@
     "WIS": 18,
     "CHR": 18
   },
-  "Proficiency Bonus": 3,
+  "Proficiency Bonus": 4,
   "Speed": 25,
   "Max HP": 47,
   "Current HP": 47,
@@ -178,11 +178,13 @@
     }
   ],
   "Spell Info": {
+    "Spellcasting Class": "Circle of the Moons",
     "Spell Save DC": 15,
     "Spell Attack Bonus": 7,
     "Spell slots": [
-      3,
       4,
+      4,
+      3,
       3,
       3,
       2
