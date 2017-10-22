@@ -11,14 +11,14 @@ try:
 except ImportError:
     import pyreadline as readline
 except:
-    print "DEBUG: Command line functionality limited; no pyreadline imported.\n"
+    print "DEBUG: Command line functionality limited; no pyreadline or readline imported.\n"
     pass
 
 
 
 # --------------------------------------------------------
 def setCharacterSheet():
-    characterName = raw_input('Please enter the name of the character to select (not case sensitive): \n: ')
+    characterName = raw_input('Please enter the name of the character to select (not case sensitive): \n$ ')
     try:
         with open('main/characterSheets/' + characterName + '/stats.json', 'r+') as characterSheetFile:
             characterSheet = json.load(characterSheetFile)
